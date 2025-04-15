@@ -12,8 +12,12 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+
+    private bool isInvincible = false;
+    private float invincibleDuration = 5f;
+
     // Start is called before the first frame update
-   private void Awake()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -36,7 +40,10 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.CompareTag("Respawn"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (!isInvincible)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
         if(collision.CompareTag("Finish"))
         {
@@ -44,7 +51,36 @@ public class PlayerController : MonoBehaviour
         }
         if(collision.CompareTag("Enemy"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (!isInvincible)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
+        if (collision.CompareTag("InvincibleItem"))  
+        {
+            StartCoroutine(ActivateInvincibility());
+            Destroy(collision.gameObject); 
+        }
+        if (collision.CompareTag("SpeedItem"))
+        {
+            moveSpeed += 3f; 
+            Destroy(collision.gameObject);
+        }
+        if (collision.CompareTag("JumpItem"))
+        {
+            jumpForce += 3f;
+            Destroy(collision.gameObject);
+        }
+    }
+    private System.Collections.IEnumerator ActivateInvincibility()
+    {
+        isInvincible = true;
+       
+        GetComponent<SpriteRenderer>().color = Color.yellow;
+
+        yield return new WaitForSeconds(invincibleDuration);
+
+        isInvincible = false;
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
