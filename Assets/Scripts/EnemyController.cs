@@ -26,6 +26,12 @@ public class EnemyController : MonoBehaviour
         if(collision.CompareTag("Boundary"))
         {
             isMovingRight = !isMovingRight;
+            transform.localScale = new Vector3(2, 2, 2);
+        }
+        if (collision.CompareTag("Boundary1"))
+        {
+            isMovingRight = !isMovingRight;
+            transform.localScale = new Vector3(-2, 2, 2);
         }
     }
 }

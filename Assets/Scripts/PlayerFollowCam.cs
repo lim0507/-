@@ -8,6 +8,8 @@ public class PlayerFollowCam : MonoBehaviour
     float cameraOffset = -10.0f;
     public float followSpeed = 5.0f;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
