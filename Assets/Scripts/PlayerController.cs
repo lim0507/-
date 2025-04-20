@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 3f;
     public float jumpForce = 3f;
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -65,12 +65,12 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.CompareTag("SpeedItem"))
         {
-            moveSpeed += 3f; 
+            moveSpeed += 1f; 
             Destroy(collision.gameObject);
         }
         if (collision.CompareTag("JumpItem"))
         {
-            jumpForce += 3f;
+            jumpForce += 1f;
             Destroy(collision.gameObject);
         }
     }

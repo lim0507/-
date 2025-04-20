@@ -6879,11 +6879,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8874093277419517790, guid: f3347d2539bacfe4e835862fed4336c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.8
+      value: 23.12
       objectReference: {fileID: 0}
     - target: {fileID: 8874093277419517790, guid: f3347d2539bacfe4e835862fed4336c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.42
+      value: -0.71
       objectReference: {fileID: 0}
     - target: {fileID: 8874093277419517790, guid: f3347d2539bacfe4e835862fed4336c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7073,7 +7073,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 594245814269704248, guid: 659096363d657f245bb68214a23bc721, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7671
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 594245814269704248, guid: 659096363d657f245bb68214a23bc721, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 82.65
       objectReference: {fileID: 0}
     - target: {fileID: 594245814269704248, guid: 659096363d657f245bb68214a23bc721, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7081,7 +7085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 594245814269704248, guid: 659096363d657f245bb68214a23bc721, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.52
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 594245814269704248, guid: 659096363d657f245bb68214a23bc721, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7126,14 +7130,14 @@ PrefabInstance:
     - target: {fileID: 1373290000909465442, guid: 659096363d657f245bb68214a23bc721, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e073642fb4dfcf545b7748ecdb3c5347, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1373290000909465442, guid: 659096363d657f245bb68214a23bc721, type: 3}
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1373290000909465442, guid: 659096363d657f245bb68214a23bc721, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6609573861198751386, guid: 659096363d657f245bb68214a23bc721, type: 3}
       propertyPath: nextLevel
